@@ -158,16 +158,15 @@ states = [
 
 random.shuffle(states)
 
-
 class User():
     def __init__(self, name, last_name, age, score):
         self.name = name
         self.last_name = last_name
         self.age = age
-        self.score = score
+        self.score = 0
 
 
-player = User(input("What's your name?"), input("What's your last name?"), input("Enter Age"), input("Highscore?"))
+player = User(input("What's your name? "), input("What's your last name? "), input("Enter Age "), print("Score: "))
 
 print("Welcome! " + player.name)
 print("Let's see how many state capitals you know!")
@@ -176,6 +175,6 @@ print("Let's see how many state capitals you know!")
 def start():
     print(states)
 
-
-
+for i in states:
+    input("Whats the capital of: " + i.get("name") + "?")
 
