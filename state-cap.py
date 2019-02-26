@@ -166,7 +166,7 @@ class User():
         self.score = score
 
 
-player = User(input("What's your name? "), input("What's your last name? "), input("Enter Age "), "0")
+player = User(input("What's your name? "), input("What's your last name? "), input("Enter Age "), 0)
 
 print("")
 print("")
@@ -176,17 +176,26 @@ print("-------------------------------------------------------------------------
 print("                   Let's see how many state capitals you know!")
 print("---------------------------------------------------------------------------------")
 print("")
-print("                                     Score: " + player.score)
+print("                                     Score: " + str(player.score))
 print("")
 
 
 for i in states:
-    res = input("Whats the capital of: " + i.get("name") + "?")
+    res = input("Whats the capital of: " + i.get("name") + "?  ")
     if(i.get("capital") == res):
         print("Correct!")
+        player.score += 1
+        print("Score: " + str(player.score))
+        print("")
     else:
         print("Wrong!")
+        print("")
 
+if(player.score >= 10):
+    print("")
+    print("---------------------------------------------------------------------------------")
+    print("                       Congratulations you're a Genius!")
+    print("---------------------------------------------------------------------------------")
 
 
 
