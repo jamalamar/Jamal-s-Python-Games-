@@ -174,6 +174,8 @@ print("                                   Welcome! " + player.name + " " + playe
 print("")
 print("---------------------------------------------------------------------------------")
 print("                   Let's see how many state capitals you know!")
+print("")
+print("                      If you score atleast 25 points you win")
 print("---------------------------------------------------------------------------------")
 print("")
 print("                                     Score: " + str(player.score))
@@ -191,10 +193,15 @@ for i in states:
         print("Wrong!")
         print("")
 
-if(player.score >= 10):
+if(player.score >= 25):
     print("")
     print("---------------------------------------------------------------------------------")
     print("                       Congratulations you're a Genius!")
+    print("---------------------------------------------------------------------------------")
+else:
+    print("")
+    print("---------------------------------------------------------------------------------")
+    print("                              Go back to School...")
     print("---------------------------------------------------------------------------------")
 
 
