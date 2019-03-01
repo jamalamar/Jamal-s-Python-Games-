@@ -191,6 +191,8 @@ for i in states:
         print("")
     else:
         print("Wrong!")
+        print("answer is: " + i.get("capital") + "!")
+        print("")
         print("")
 
 if(player.score >= 25):
